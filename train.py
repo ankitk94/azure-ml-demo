@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft. All rights reserved.
 # Licensed under the MIT license.
 
-from sklearn.datasets import load_diabetes
+from sklearn.datasets import load_boston
 from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
@@ -15,7 +15,7 @@ os.makedirs('./outputs', exist_ok=True)
 
 run = Run.get_submitted_run()
 
-X, y = load_diabetes(return_X_y=True)
+X, y = load_boston(return_X_y=True)
 
 run = Run.get_submitted_run()
 
